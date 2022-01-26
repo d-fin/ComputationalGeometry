@@ -7,6 +7,7 @@ Group: David Finley
 This program runs through the basics of computational geometry.  
 '''
 from Points import Points 
+from LineSegments import LineSegment
 import random 
 
 def main():
@@ -46,6 +47,10 @@ def main():
     smallestDistance = int(distances[index])
     smallestDistanceWithPoints = pairsOfPoints[index]
     print(f'Smallest distance between two points: {smallestDistance}\nPoints: {smallestDistanceWithPoints}')
+
+    ''' ---------------------------------------------------------------------------------------------------- '''
+    ''' Bretts part '''
+    
 
 ''' The function below calculates the distances between the points provided '''
 def euclideanDistance(coordinate1, coordinate2):
