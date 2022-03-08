@@ -6,6 +6,7 @@ Group: David Finley
        
 This program runs through the basics of computational geometry.  
 '''
+
 from Points import Points 
 from LineSegments import LineSegment
 import random 
@@ -41,7 +42,7 @@ def main():
             point2 = points[j].getPoints()
             pair = [point1, point2]
             pairsOfPoints.append(pair)
-            distances.append(euclideanDistance(point1, point2))
+            distances.append(Points.euclideanDistance(point1, point2))
     
     index = distances.index(min(distances), 0, len(distances))
     smallestDistance = int(distances[index])
@@ -59,9 +60,9 @@ def main():
     
 
 ''' The function below calculates the distances between the points provided '''
-def euclideanDistance(coordinate1, coordinate2):
+""" def euclideanDistance(coordinate1, coordinate2):
         return pow(pow(coordinate1[0] - coordinate2[0], 2) + pow(coordinate1[1] - coordinate2[1], 2), .5)
-    
+   """  
 ''' This function calculates to find the smallest convex polyhedron/polygon containing all the points '''
 class ConvexHull(object):  
     

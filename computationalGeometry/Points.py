@@ -15,3 +15,7 @@ class Points:
         
     def getPoints(self):
         return (self.xPoint, self.yPoint)
+
+    def euclideanDistance(coordinate1, coordinate2):
+        return pow(pow(coordinate1[0] - coordinate2[0], 2) + pow(coordinate1[1] - coordinate2[1], 2), .5)
+  
