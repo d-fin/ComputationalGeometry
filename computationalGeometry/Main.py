@@ -57,7 +57,10 @@ def main():
     ch = ConvexHull()
     for _ in range(50):
         ch.add(Points(random.randint(-100, 100), random.randint(-100, 100)))
-    print("Points on hull:", ch.get_hull_points())
+    #print("Points on hull:", ch.get_hull_points())
+    pointsOnHull = ch.get_hull_points()
+    for points in pointsOnHull:
+        print(f'({points.xPoint}, {points.yPoint})')
 
 if __name__ == '__main__':
     main()
