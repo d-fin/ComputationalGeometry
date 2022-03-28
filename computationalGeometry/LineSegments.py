@@ -7,3 +7,4 @@ class LineSegment:
 
     def printPoints(self):
         print(f'X; {self.x}\nY: {self.y}')
+ 

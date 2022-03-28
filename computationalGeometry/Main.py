@@ -17,7 +17,7 @@ def main():
     for now I just create 5 points with random integers.
     if duplicate is found it does not add the point/ '''
     points = []
-    for i in range(0, 5):
+    for i in range(0, 10):
         rand1 = random.randint(-10, 10)
         rand2 = random.randint(-10, 10)
         if len(points) != 0:
@@ -55,12 +55,13 @@ def main():
     
     ''' Calculating the convex hull to find the smallest convex polyhedron '''
     ch = ConvexHull()
-    for _ in range(50):
-        ch.add(Points(random.randint(-100, 100), random.randint(-100, 100)))
+    for _ in range(10):
+        ch.add(Points(random.randint(-10, 10), random.randint(-10, 10)))
     #print("Points on hull:", ch.get_hull_points())
     pointsOnHull = ch.get_hull_points()
     for points in pointsOnHull:
         print(f'({points.xPoint}, {points.yPoint})')
+    print()
 
 if __name__ == '__main__':
     main()

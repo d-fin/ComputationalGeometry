@@ -1,4 +1,5 @@
 from computationalGeometry.Points import Points 
+from computationalGeometry.ConvexHull import ConvexHull
 import random 
 
 points = []
@@ -19,4 +20,17 @@ def test_euclideanDistance():
             distance.append(Points.euclideanDistance(point1, point2))
     
     assert distance.index(min(distance), 0, len(distance)) == 3
+
+def test_convexHull():
+    x = [ (4, 7), (-2, -5), (10, -4), (-3, 5), (9, 8), (-2, -7), (6, 1), (2, 4), (-6, 8), (-3, 9) ]
+    ans = [ (-6, -8), (10, -4), (9, 8), (-3, 9), (6, -8) ]
+    points = []
+    ch = ConvexHull()
+    for i in x:
+        points.append(Points(i[0], i[1]))
+
+    pointsOnHull = ch.get_hull_points()
+    
+    for j in range(0, len(pointsOnHull)):
+        assert pointsOnHull[j] == ans[j]
     
